@@ -28,8 +28,8 @@ var DatadpGenerator = yeoman.generators.Base.extend({
     var prompts = [{
       type: 'confirm',
       name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: false
+      message: 'Would you like to continue?',
+      default: true
     }];
 
     this.prompt(prompts, function (props) {
@@ -40,16 +40,16 @@ var DatadpGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
-    this.mkdir('app');
-    this.mkdir('app/templates');
-
     this.copy('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
+      
+    this.copy('index.html', 'index.html');
+    this.directory('libs', 'libs');
+    this.directory('resources', 'resources');
+      
+    console.log('=>  finish generating!');
   },
 
   projectfiles: function () {
-    this.copy('editorconfig', '.editorconfig');
-    this.copy('jshintrc', '.jshintrc');
   }
 });
 
