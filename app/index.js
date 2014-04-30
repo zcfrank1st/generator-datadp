@@ -29,7 +29,7 @@ var DatadpGenerator = yeoman.generators.Base.extend({
       type: 'confirm',
       name: 'someOption',
       message: 'Would you like to enable this option?',
-      default: true
+      default: false
     }];
 
     this.prompt(prompts, function (props) {
