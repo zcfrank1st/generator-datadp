@@ -40,7 +40,8 @@ var DatadpGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
-    this.copy('_package.json', 'package.json');
+    this.copy('package.json', 'package.json');
+    this.copy('Gruntfile.js', 'Gruntfile.js');
       
     this.copy('index.html', 'index.html');
     this.directory('libs', 'libs');
