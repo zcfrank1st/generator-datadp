@@ -2,6 +2,8 @@
 
 > [Yeoman](http://yeoman.io) generator
 
+## Description
+This is a fontend template for dianping.com (especially for DpDp ^-^)
 
 ## Getting Started
 
